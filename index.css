@@ -22,19 +22,19 @@
 } */
 @font-face {
     font-family: 'screamer';
-    src: url('/fonts/screamer.otf');
+    src: url('fonts/screamer.otf');
 }
 @font-face {
     font-family: 'grotesk';
-    src: url('/fonts/grotesk5.ttf');
+    src: url('fonts/grotesk5.ttf');
 }
 @font-face {
     font-family: 'grotesk4';
-    src: url('/fonts/grotesk4.ttf');
+    src: url('fonts/grotesk4.ttf');
 }
 @font-face {
     font-family: 'grotesk2';
-    src: url('/fonts/grotesk2.ttf');
+    src: url('fonts/grotesk2.ttf');
 }
 
 
