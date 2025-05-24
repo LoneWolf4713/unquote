@@ -1,0 +1,179 @@
+:root{
+    --darkOrange: #ED5724;
+    --lightOrange: #FAE07B;
+    --lightPink: #FFC4E5;
+    --darkPink: #DC0073;
+    --white: #FFFDEB;
+    --lightBlue: #C5E7FF;
+    --darkBlue: #00A1E4;
+    --lightGreen: #BCF09C;
+    --darkGreen: #06630A;
+}
+/* :root{
+    --darkOrange: #ED5724;
+    --lightOrange: #FAE07B;
+    --lightPink: #FFC4E5;
+    --darkPink: #F943A7;
+    --white: #FFFDEB;
+    --lightBlue: #C5E7FF;
+    --darkBlue: #065C6A;
+    --lightGreen: #BCF09C;
+    --darkGreen: #06630A;
+} */
+@font-face {
+    font-family: 'screamer';
+    src: url('/fonts/screamer.otf');
+}
+@font-face {
+    font-family: 'grotesk';
+    src: url('/fonts/grotesk5.ttf');
+}
+@font-face {
+    font-family: 'grotesk4';
+    src: url('/fonts/grotesk4.ttf');
+}
+@font-face {
+    font-family: 'grotesk2';
+    src: url('/fonts/grotesk2.ttf');
+}
+
+
+.screamer{
+    font-family: grotesk3;
+}
+.grotesk{
+    font-family: grotesk;
+}
+.grotesk2{
+    font-family: grotesk2;
+}
+.grotesk4{
+    font-family: grotesk4;
+}
+
+.heading {
+
+  font-size: clamp(10rem, 100vw, 15rem);
+}
+/* Tablet and below: scale down */
+
+
+/* Mobile: further reduce for small screens */
+@media (max-width: 600px) {
+  .heading {
+    font-size: clamp(2rem, 50vw, 10rem);
+  }
+}
+
+body{
+    background-color: var(--white);
+}
+
+*{
+  font-family: grotesk4;
+}
+.bgOrange{
+    background-color: var(--darkOrange);
+}
+.bgGreen{
+  background-color: var(--darkGreen) !important;
+}
+.bgBlue{
+  background-color: var(--darkBlue) !important;
+}
+.bgPink{
+  background-color: var(--darkPink) !important;
+}
+.rough-divider {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+
+.rough-divider svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+  transform: rotate(180deg);
+}
+
+.section-with-divider {
+  position: relative; /* so divider's absolute positioning is relative to this */
+}
+
+.section-with-divider .rough-divider {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  height: 100px;
+  z-index: 2;
+}
+
+.section-with-divider .rough-divider svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
+/* Flip the SVG so jagged edges point *up* if you want top divider */
+/* or use rotate(0deg) for bottom divider if jagged path is designed accordingly */
+
+/* If you want to flip the divider upside down: */
+.section-with-divider .rough-divider.flipped {
+  transform: rotate(180deg);
+}
+
+
+footer.footer{
+  background-image: url('/images/bg4.png'); /* Use a proper path */
+  background-color: transparent;
+  background-size: cover;       /* Scales image to cover entire footer */
+  background-position: bottom;  /* Keeps image centered */
+  background-repeat: no-repeat; /* Avoid tiling */
+  background-attachment: unset; /* Optional: keeps image fixed on scroll */
+  min-height: 200px;            /* Adjust height as needed */
+  color: white;                 /* Ensure text is readable */
+}
+
+.eachFlag{
+  background-color: var(--white);
+  border-radius: 5px;
+  min-width: 80%;
+}
+
+.flagsSection {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+.flagsSection::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.eachFlag {
+  min-width: 80%; /* Each flag card takes up most of the viewport width */
+  flex: 0 0 auto;
+}
+.flagsSection {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.eachFlag {
+  scroll-snap-align: start;
+}
+
+
+.teamIcon{
+  height: 256px;
+  width: 256px;
+}
+
