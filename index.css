@@ -132,7 +132,7 @@ body{
 
 
 footer.footer{
-  background-image: url('/images/bg4.png'); /* Use a proper path */
+  background-image: url('images/bg4.png'); /* Use a proper path */
   background-color: transparent;
   background-size: cover;       /* Scales image to cover entire footer */
   background-position: bottom;  /* Keeps image centered */
